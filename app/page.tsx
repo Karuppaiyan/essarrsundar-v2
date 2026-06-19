@@ -1,6 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import {
+  Header,
+  HeroCarousel,
+  PhilosophySection,
+  StatsSection,
+  SkillsSection,
+  ContactSection,
+  Footer,
+} from '@/components';
+
+import type { NextPage } from 'next';
+import AquaticCarousel from "@/components/AquaticCarousel";
+import Testimonials from "@/components/Testimonial";
 import { generateClient } from "aws-amplify/data";
 import type { Schema } from "@/amplify/data/resource";
 import { useAuthenticator } from "@aws-amplify/ui-react";
@@ -35,6 +48,15 @@ export default function App() {
 
   return (
     <main>
+      <Header/> 
+          {/* <HeroCarousel/>    */}
+          <AquaticCarousel/>
+          <PhilosophySection/>
+          <StatsSection/>
+          <Testimonials />
+          <SkillsSection/>
+          <ContactSection/>
+          <Footer/>
             <button onClick={signOut}>Sign out</button>
     </main>
   );

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { client } from '@/lib/amplify-client';
+import { client } from '../lib/amplify-client';
 import Link from 'next/link';
 
 interface Stats {

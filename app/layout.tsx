@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import AuthenticatorWrapper from "./AuthenticatorWrapper";
 import "@aws-amplify/ui-react/styles.css";
-import "./app.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import "@/app/globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,12 +14,11 @@ export default function RootLayout({
 }) {
   return (
         
-    <html lang="en">
-      <body>      
-        <AuthenticatorWrapper>
-          {children}
-        </AuthenticatorWrapper>
-      </body>
+    <html
+      lang="en"
+      className={`h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }

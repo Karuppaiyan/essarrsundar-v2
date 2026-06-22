@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-import { client, type Enquiry, type EnquiryStatus } from '@/lib/amplify-client';
+import { client, type Enquiry, type EnquiryStatus } from '../lib/amplify-client';
 import Modal from '@/components/admin/Modal';
 
 const STATUS_CONFIG: Record<EnquiryStatus, { label: string; color: string; bg: string }> = {

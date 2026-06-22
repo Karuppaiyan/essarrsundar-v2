@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-import { client, type SiteSetting } from '@/lib/amplify-client';
+import { client, type SiteSetting } from '../lib/amplify-client';
 import Modal from '@/components/admin/Modal';
 
 const DEFAULT_SETTINGS = [

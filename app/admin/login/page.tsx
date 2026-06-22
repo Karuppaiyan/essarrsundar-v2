@@ -2,7 +2,24 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { Amplify } from 'aws-amplify';
 import { signIn, confirmSignIn, resetPassword, confirmResetPassword } from 'aws-amplify/auth';
+import amplifyOutputs from "../../../amplify_outputs.json"; // Adjust the path as needed to point to your amplify outputs file
+
+Amplify.configure({
+      Auth: {
+        Cognito: {
+          userPoolId: amplifyOutputs.auth.user_pool_id,
+          userPoolClientId: amplifyOutputs.auth.user_pool_client_id,
+          signUpVerificationMethod: 'code',
+          loginWith: {
+            username: true,
+            email: true,
+          }
+        }
+      }
+    });
+
 
 type Step = 'login' | 'new-password' | 'forgot' | 'forgot-confirm';
 
@@ -132,7 +149,7 @@ export default function AdminLoginPage() {
             WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
             letterSpacing: 3, textTransform: 'uppercase', marginBottom: 6,
           }}>
-            ESS ARR
+            ESS ARR - ADMIN
           </h1>
           <p style={{ fontSize: 12, color: 'var(--text-dim)', letterSpacing: 2, textTransform: 'uppercase' }}>
             {titles[step]}

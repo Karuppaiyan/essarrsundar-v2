@@ -13,11 +13,5 @@ export const auth = defineAuth({
     givenName: { required: true, mutable: true },
     familyName: { required: true, mutable: true },
   },
-  passwordPolicy: {
-    minLength: 8,
-    requireLowercase: true,
-    requireUppercase: true,
-    requireNumbers: true,
-    requireSymbols: false,
-  },
+  
 });

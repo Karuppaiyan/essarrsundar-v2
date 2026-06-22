@@ -7,7 +7,7 @@ import { signIn, confirmSignIn, resetPassword, confirmResetPassword } from 'aws-
 import amplifyOutputs from "../../../amplify_outputs.json"; // Adjust the path as needed to point to your amplify outputs file
 
 Amplify.configure({
-      Auth: {
+  Auth: {
         Cognito: {
           userPoolId: amplifyOutputs.auth.user_pool_id,
           userPoolClientId: amplifyOutputs.auth.user_pool_client_id,
@@ -18,7 +18,8 @@ Amplify.configure({
           }
         }
       }
-    });
+});
+
 
 
 type Step = 'login' | 'new-password' | 'forgot' | 'forgot-confirm';

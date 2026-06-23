@@ -3,8 +3,10 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Amplify } from 'aws-amplify';
-import { signIn, confirmSignIn, resetPassword, confirmResetPassword } from 'aws-amplify/auth';
+import { signIn, signOut, confirmSignIn, resetPassword, confirmResetPassword } from 'aws-amplify/auth';
 import amplifyOutputs from "../../../amplify_outputs.json"; // Adjust the path as needed to point to your amplify outputs file
+
+
 
 Amplify.configure({
   Auth: {
@@ -20,9 +22,12 @@ Amplify.configure({
       }
 });
 
-
-
 type Step = 'login' | 'new-password' | 'forgot' | 'forgot-confirm';
+
+const handleSignOut = async () => {
+  await signOut();
+};
+
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -34,6 +39,7 @@ export default function AdminLoginPage() {
   const [error, setError]     = useState('');
   const [loading, setLoading] = useState(false);
   const [showPwd, setShowPwd] = useState(false);
+  
 
   /* ── Handlers ── */
   const handleLogin = async (e: React.FormEvent) => {

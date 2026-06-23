@@ -1,5 +1,5 @@
 import { generateClient } from "aws-amplify/data";
-import type { Schema } from "../../amplify/data/resource";
+import type { Schema } from "../../../amplify/data/resource";
 
 // Singleton client — import this anywhere you need data access
 export const client = generateClient<Schema>();

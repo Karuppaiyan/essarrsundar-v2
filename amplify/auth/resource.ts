@@ -8,6 +8,6 @@ export const auth = defineAuth({
   multifactor: {
     mode: "OPTIONAL",
     totp: true,
-  },
+  }
   
 });

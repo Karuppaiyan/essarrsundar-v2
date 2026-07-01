@@ -9,9 +9,5 @@ export const auth = defineAuth({
     mode: "OPTIONAL",
     totp: true,
   },
-  userAttributes: {
-    givenName: { required: true, mutable: true },
-    familyName: { required: true, mutable: true },
-  },
   
 });

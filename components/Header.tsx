@@ -2,7 +2,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from 'next/image';
-import logo from '@/public/images/logo.png';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);

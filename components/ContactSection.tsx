@@ -35,7 +35,7 @@ export default function ContactSection() {
         {/* Contact Info */}
         <div className="contact-info">
           <a
-            href="https://maps.google.com/?q=Silicon+Valley+CA+94025"
+            href="https://www.google.com/maps/@13.0663287,80.2137716,17z?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="info-item"
@@ -55,7 +55,7 @@ export default function ContactSection() {
             </div>
           </a>
 
-          <a href="tel:+15551234567" className="info-item">
+          <a href="tel:+919841573100" className="info-item">
             <div className="info-icon">📱</div>
             <div className="info-text">
               <h4>Phone</h4>

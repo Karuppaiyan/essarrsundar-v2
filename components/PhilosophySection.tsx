@@ -47,7 +47,7 @@ export default function PhilosophySection() {
               industry standards and push the limits of what's possible. Elevate
               your designs with premium vector stickers from{" "}
               <a
-                href="https://www.vectorsticker.com"
+                href="#"
                 rel="nofollow"
                 target="_blank"
               >
@@ -64,7 +64,7 @@ export default function PhilosophySection() {
               Meticulous attention to detail ensures every pixel, every line of
               code, and every interaction is perfectly crafted by{" "}
               <a
-                href="https://templatemo.com"
+                href="#"
                 rel="nofollow"
                 target="_blank"
                 style={{ color: "var(--accent-cyan)", textDecoration: "none" }}
@@ -73,7 +73,7 @@ export default function PhilosophySection() {
               </a>
               , enhanced with stunning visuals from{" "}
               <a
-                href="https://unsplash.com"
+                href="#"
                 rel="nofollow"
                 target="_blank"
                 style={{ color: "var(--accent-cyan)", textDecoration: "none" }}
@@ -92,7 +92,7 @@ export default function PhilosophySection() {
               building timeless solutions for tomorrow. Boost your productivity
               with the easy-to-use timer tools at{" "}
               <a
-                href="https://timermo.com"
+                href="#"
                 rel="nofollow"
                 target="_blank"
               >

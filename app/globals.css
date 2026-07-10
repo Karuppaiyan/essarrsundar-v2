@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
 
 * {
 	margin: 0;
@@ -7,19 +7,19 @@
 }
 
 :root {
-	--primary-black: #0a0a0a;
-	--carbon-dark: #121212;
-	--carbon-medium: #1a1a1a;
-	--carbon-light: #2a2a2a;
-	--metal-dark: #3a3a3a;
+	--primary-black: #ffffff;
+	--carbon-dark: #ffffff;
+	--carbon-medium: #ffffff;
+	--carbon-light: #ddd8d8;
+	--metal-dark: #eeeaea;
 	--metal-light: #4a4a4a;
 	--accent-red: #ff3333;
-	--accent-blue: #00a8ff;
+	--accent-blue: #ffffff;
 	--accent-green: #00ff88;
 	--accent-purple: #9945ff;
-	--accent-cyan: #00ffff;
-	--text-primary: #ffffff;
-	--text-secondary: #b0b0b0;
+	--accent-cyan: #000000;
+	--text-primary: #000000;
+	--text-secondary: #030303;
 	--text-dim: #808080;
 }
 
@@ -166,10 +166,10 @@ body::after {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background: linear-gradient(180deg,
+	/* background: linear-gradient(180deg,
 			rgba(18, 18, 18, 0.98) 0%,
 			rgba(18, 18, 18, 0.9) 50%,
-			rgba(18, 18, 18, 0) 100%);
+			rgba(18, 18, 18, 0) 100%); */
 	backdrop-filter: blur(20px);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	z-index: 1000;
@@ -177,7 +177,7 @@ body::after {
 }
 
 .header.scrolled {
-	background: rgba(18, 18, 18, 0.98);
+	/* background: rgba(18, 18, 18, 0.98); */
 	backdrop-filter: blur(30px);
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 }
@@ -203,6 +203,19 @@ body::after {
 	height: 45px;
 	margin-right: 15px;
 	position: relative;
+}
+founder-image-container {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+founder-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
 }
 
 /* Prism-inspired logo */
@@ -363,11 +376,13 @@ body::after {
   font-weight: 900;
   text-transform: uppercase;
   margin-bottom: 50px;
-  background: linear-gradient(135deg,
+  /* background-color: #000000; */
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-purple));
+  /* background: linear-gradient(135deg,
 			var(--accent-red) 0%,
 			var(--accent-blue) 33%,
 			var(--accent-green) 66%,
-			var(--accent-purple) 100%);
+			var(--accent-purple) 100%); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -385,7 +400,8 @@ body::after {
 }
 
 .testimonial-card {
-  background: linear-gradient(135deg, var(--carbon-medium), var(--carbon-dark));
+  /* background: linear-gradient(135deg, var(--carbon-medium), var(--carbon-dark)); */
+  background:yellowgreen;
   border: 1px solid var(--metal-dark);
   border-radius: 20px;
   padding: 40px;
@@ -395,7 +411,9 @@ body::after {
 
 .testimonial-quote {
   font-size: 22px;
-  color: var(--text-secondary);
+  /* color: var(--text-secondary); */
+  /* color: var(--text-primary); */
+  color: red;
   line-height: 1.6;
   margin-bottom: 20px;
   font-style: italic;
@@ -842,11 +860,13 @@ main > div > a:hover {
 }
 
 .swiper-slide--one {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("../public/images/quantum-cloud.jpg") no-repeat 50% 50%/cover;
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+  url("../public/images/quantum-cloud.jpg") no-repeat 50% 50%/cover;
 }
 
 .swiper-slide--two {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("../public/images/ar-interface.jpg") no-repeat 50% 50%/cover;
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+  url("../public/images/ar-interface.jpg") no-repeat 50% 50%/cover;
 }
 
 .swiper-slide--three {
@@ -888,12 +908,13 @@ main > div > a:hover {
 	letter-spacing: 3px;
 	margin-bottom: 30px;
 	line-height: 1.2;
-	background: linear-gradient(135deg,
+	background: #005baa;
+	/* background: linear-gradient(135deg,
 			var(--accent-cyan) 0%,
 			var(--accent-purple) 25%,
 			var(--accent-blue) 50%,
 			var(--accent-green) 75%,
-			var(--accent-cyan) 100%);
+			var(--accent-cyan) 100%); */
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -1257,7 +1278,7 @@ main > div > a:hover {
 	overflow: hidden;
 	border-radius: 20px;
 	background: linear-gradient(135deg, var(--carbon-medium), var(--carbon-light));
-	border: 2px solid var(--metal-dark);
+	border: 2px solid var(--primary-black);
 }
 
 .skill-hexagon:hover .hexagon-inner {
@@ -1396,7 +1417,7 @@ main > div > a:hover {
 	background: linear-gradient(135deg,
 			rgba(42, 42, 42, 0.3),
 			rgba(26, 26, 26, 0.5));
-	border: 1px solid var(--metal-dark);
+	border: 1px solid var(--primary-black);
 	border-radius: 20px;
 }
 
@@ -1503,7 +1524,8 @@ a.info-item {
 	background: linear-gradient(135deg,
 			rgba(42, 42, 42, 0.3),
 			rgba(26, 26, 26, 0.5));
-	border: 1px solid var(--metal-dark);
+	/* border: 1px solid var(--metal-dark); */
+	border: 1px solid rgba(153, 69, 255, 0.2);
 	border-radius: 20px;
 }
 
@@ -1525,7 +1547,7 @@ a.info-item {
 	width: 100%;
 	padding: 15px;
 	background: var(--carbon-dark);
-	border: 1px solid var(--metal-dark);
+	border: 1px solid var(--primary-black);
 	border-radius: 8px;
 	color: var(--text-primary);
 	font-size: 14px;
@@ -1535,7 +1557,7 @@ a.info-item {
 .form-group input:focus,
 .form-group textarea:focus {
 	outline: none;
-	border-color: var(--accent-purple);
+	border-color: var(--primary-black);
 	box-shadow: 0 0 10px rgba(153, 69, 255, 0.2);
 }
 
@@ -1622,7 +1644,7 @@ a.info-item {
 
 .social-icon:hover {
 	background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
-	border-color: var(--accent-purple);
+	border-color: var(--secondary-black);
 	color: var(--text-primary);
 	transform: translateY(-3px);
 	box-shadow: 0 5px 15px rgba(153, 69, 255, 0.3);
@@ -1729,7 +1751,8 @@ a.info-item {
 		left: -100%;
 		top: 85px;
 		flex-direction: column;
-		background: rgba(18, 18, 18, 0.98);
+		/* background: rgba(18, 18, 18, 0.98); */
+		background: rgba(255, 255, 255, 0.98);
 		width: 100%;
 		text-align: center;
 		transition: 0.3s;

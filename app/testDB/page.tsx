@@ -1,3 +1,4 @@
+
 import { Header, Footer } from '@/components';
 import { Amplify } from 'aws-amplify';
 import outputs from "@/amplify_outputs.json";

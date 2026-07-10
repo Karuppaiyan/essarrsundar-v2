@@ -1,6 +1,7 @@
 // components/PhilosophySection.tsx
 "use client";
 import React, { useEffect } from "react";
+import Image from "next/image";
 
 export default function PhilosophySection() {
   useEffect(() => {
@@ -37,8 +38,10 @@ export default function PhilosophySection() {
           design. Every project is a spectrum of possibilities waiting to be
           discovered.
         </p>
-
-        <div className="philosophy-pillars">
+          <div className="founder-image-container">
+            <Image src="/images/Founder_sundar_0.png" alt="Essarr Sundar image" className="founder-image responsive-img" width={718} height={692} />
+          </div>
+        {/* <div className="philosophy-pillars">
           <div className="pillar">
             <div className="pillar-icon">💎</div>
             <h3 className="pillar-title">Innovation</h3>
@@ -46,14 +49,7 @@ export default function PhilosophySection() {
               Breaking boundaries with revolutionary approaches that redefine
               industry standards and push the limits of what's possible. Elevate
               your designs with premium vector stickers from{" "}
-              <a
-                href="#"
-                rel="nofollow"
-                target="_blank"
-              >
-                VectorSticker
-              </a>
-              .
+              
             </p>
           </div>
 
@@ -62,25 +58,7 @@ export default function PhilosophySection() {
             <h3 className="pillar-title">Precision</h3>
             <p className="pillar-description">
               Meticulous attention to detail ensures every pixel, every line of
-              code, and every interaction is perfectly crafted by{" "}
-              <a
-                href="#"
-                rel="nofollow"
-                target="_blank"
-                style={{ color: "var(--accent-cyan)", textDecoration: "none" }}
-              >
-                TemplateMo
-              </a>
-              , enhanced with stunning visuals from{" "}
-              <a
-                href="#"
-                rel="nofollow"
-                target="_blank"
-                style={{ color: "var(--accent-cyan)", textDecoration: "none" }}
-              >
-                Unsplash
-              </a>
-              .
+              code, and every interaction is perfectly crafted by, enhanced with stunning visuals from.
             </p>
           </div>
 
@@ -90,18 +68,10 @@ export default function PhilosophySection() {
             <p className="pillar-description">
               Continuous adaptation and growth, staying ahead of trends while
               building timeless solutions for tomorrow. Boost your productivity
-              with the easy-to-use timer tools at{" "}
-              <a
-                href="#"
-                rel="nofollow"
-                target="_blank"
-              >
-                TimerMo
-              </a>
-              .
+              with the easy-to-use timer tools at.
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* Particle Background */}
         <div className="philosophy-particles" id="particles"></div>

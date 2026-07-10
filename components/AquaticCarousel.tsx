@@ -1,5 +1,5 @@
 "use client";
-
+import Image from 'next/image'
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Keyboard, Mousewheel } from "swiper/modules";
@@ -12,12 +12,18 @@ import "swiper/css/mousewheel";
 export default function AquaticCarousel() {
   return (
     <section className="hero" id="home">
+       <br />
+      <br />
       <main>
-        <div> <span>discover</span>
-          <h1>We Build Next Gen Event Experiences</h1>
-          <p>We are a dedicated agile team of highly skilled technicians, supervisors, managers and workers alike who are trained to handle the most demanding events. We bring expertise of international standards and ethics into our style of working.</p>
-          <a href="#">Learn More</a>
-      </div>
+        <div className="section-header">
+          <span>discover</span>
+                <h1 className="section-title">We Build Next Gen Event Experiences</h1>
+                <p className="section-subtitle">
+                  We are a dedicated agile team of highly skilled technicians, supervisors, managers and workers alike who are trained to handle the most demanding events. We bring expertise of international standards and ethics into our style of working.
+                </p>
+                <a href="#">Learn More</a>
+              </div>
+        
       <br />
       <br />
       <Swiper

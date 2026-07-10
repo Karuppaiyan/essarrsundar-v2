@@ -27,7 +27,6 @@ export default function Header() {
           <li><Link href="#home" className="nav-link active">Home</Link></li>
           <li><Link href="../#about" className="nav-link">About</Link ></li>
           <li><Link href="../#stats" className="nav-link">What We Do</Link></li>
-          <li><Link href="../#skills" className="nav-link">Equipment Rentals</Link></li>
           <li><Link href="/rentalInventory" className="nav-link">Rental Inventory</Link></li>
           <li><Link href="../#contact" className="nav-link">Contact</Link></li>
         </ul>

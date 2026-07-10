@@ -6,6 +6,7 @@ import {
   SkillsSection,
   ContactSection,
   Footer,
+  HeroCarousel,
 } from '@/components';
 
 import type { NextPage } from 'next';
@@ -43,14 +44,14 @@ const Home: NextPage = () => {
 
   return (
     <>
-        <Header/> 
-        <AquaticCarousel/>
-        <PhilosophySection/>
+      <Header/>
+      <HeroCarousel/>
+      <PhilosophySection/>
         <StatsSection/>
-        <Testimonials />
         <SkillsSection/>
         <ContactSection/>
-        <Footer/></>
+        <Footer/>
+        </>
     
   );
 }

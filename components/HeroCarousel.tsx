@@ -31,7 +31,7 @@ const portfolioData = [
                 title: 'Cyber Defense',
                 description: 'Military-grade cybersecurity framework with real-time threat detection and automated response.',
                 image: '/images/corporate-thumbnail.jpg',
-                tech: ['Zero Trust', 'AI Defense', 'Encryption']
+                tech: ['Zero Trust', 'AI Defense']
             },
             {
                 id: 5,
@@ -45,7 +45,7 @@ const portfolioData = [
                 title: 'AR Interface',
                 description: 'Augmented reality system for immersive data visualization and interactive experiences.',
                 image: '/images/ar-interface.jpg',
-                tech: ['Unity', 'ARCore', 'Computer Vision']
+                tech: ['Unity', 'ARCore']
             },
             {
                 id: 7,
@@ -257,7 +257,7 @@ export default function HeroCarousel() {
         </div>
 
         {/* Indicators */}
-        <div className="carousel-indicators" id="indicators">
+        {/* <div className="carousel-indicators" id="indicators">
           {portfolioData.map((_, index) => (
             <div
               key={index}
@@ -265,7 +265,7 @@ export default function HeroCarousel() {
               onClick={() => goToSlide(index)}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

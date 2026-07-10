@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "@aws-amplify/ui-react/styles.css";
+// @ts-ignore: global stylesheet import type declarations may be missing
 import "./globals.css";
 
 export const metadata: Metadata = {

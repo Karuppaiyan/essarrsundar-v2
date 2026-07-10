@@ -28,7 +28,7 @@ export default function PhilosophySection() {
       <div className="philosophy-container">
         <div className="prism-line"></div>
 
-        <h2 className="philosophy-headline">
+        <h2 className="section-title">
           Refracting Ideas<br />Into Reality
         </h2>
 

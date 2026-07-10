@@ -120,7 +120,7 @@ const products: Product[] = [
 ];
 
 const PAGE_SIZES = [9, 18, 27];
-const WHATSAPP = '919911335073';
+const WHATSAPP = '919176473153';
 
 function buildWAUrl(p: Product) {
   const msg = encodeURIComponent(`Hi, I'm interested in: *${p.name}*\n\nCategory: ${p.category}\n\nPlease share rental pricing and availability.\nRegards!`);
@@ -577,7 +577,7 @@ export default function RentalInventory() {
   }, [selectedCat]);
 
   return (
-    <section style={{ padding: '120px 0 80px', minHeight: '100vh' }}>
+    <section style={{ padding: '180px 0 80px', minHeight: '100vh' }}>
       {/* ── Section heading ── */}
       <div style={{ textAlign: 'center', marginBottom: 60, padding: '0 30px' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 20, marginBottom: 20 }}>
@@ -587,17 +587,7 @@ export default function RentalInventory() {
           </span>
           <div style={{ height: 1, width: 80, background: 'linear-gradient(90deg, var(--accent-purple), transparent)' }} />
         </div>
-        <h2 style={{
-          fontSize: 'clamp(32px, 5vw, 56px)',
-          fontWeight: 900,
-          textTransform: 'uppercase',
-          letterSpacing: 3,
-          background: 'linear-gradient(135deg, var(--accent-red) 0%, var(--accent-blue) 33%, var(--accent-green) 66%, var(--accent-purple) 100%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          marginBottom: 16,
-        }}>
+        <h2 className="section-title">
           Rental Inventory
         </h2>
         <p style={{ color: 'var(--text-secondary)', fontSize: 16, maxWidth: 600, margin: '0 auto', lineHeight: 1.7 }}>

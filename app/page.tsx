@@ -6,6 +6,7 @@ import {
   SkillsSection,
   ContactSection,
   Footer,
+  HeroCarousel,
 } from '@/components';
 
 import type { NextPage } from 'next';
@@ -46,6 +47,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Header/>
+      <HeroCarousel/>
       <HeroImage/>
       <PhilosophySection/>
         <StatsSection/>

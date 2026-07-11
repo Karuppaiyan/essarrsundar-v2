@@ -9,49 +9,49 @@ const portfolioData = [
                 id: 1,
                 title: 'Neural Network',
                 description: 'Advanced AI system with deep learning capabilities for predictive analytics and pattern recognition.',
-                image: '/images/virtual-for-website.jpg',
+                image: '/images/events/gall0.jpg',
                 tech: ['TensorFlow', 'Python', 'CUDA']
             },
             {
                 id: 2,
                 title: 'Quantum Cloud',
                 description: 'Next-generation cloud infrastructure leveraging quantum computing for unprecedented processing power.',
-                image: '/images/final-thumbanil.jpg',
+                image: '/images/events/gall1.png',
                 tech: ['AWS', 'Kubernetes', 'Docker']
             },
             {
                 id: 3,
                 title: 'Blockchain Vault',
                 description: 'Secure decentralized storage solution using advanced encryption and distributed ledger technology.',
-                image: '/images/kinetic-for-website.jpg',
+                image: '/images/events/gall2.png',
                 tech: ['Ethereum', 'Solidity', 'Web3']
             },
             {
                 id: 4,
                 title: 'Cyber Defense',
                 description: 'Military-grade cybersecurity framework with real-time threat detection and automated response.',
-                image: '/images/corporate-thumbnail.jpg',
+                image: '/images/events/gall3.png',
                 tech: ['Zero Trust', 'AI Defense']
             },
             {
                 id: 5,
                 title: 'Data Nexus',
                 description: 'Big data processing platform capable of analyzing petabytes of information in real-time.',
-                image: '/images/data-nexus.jpg',
+                image: '/images/events/gall4.png',
                 tech: ['Apache Spark', 'Hadoop', 'Kafka']
             },
             {
                 id: 6,
                 title: 'AR Interface',
                 description: 'Augmented reality system for immersive data visualization and interactive experiences.',
-                image: '/images/ar-interface.jpg',
+                image: '/images/events/gall5.png',
                 tech: ['Unity', 'ARCore']
             },
             {
                 id: 7,
                 title: 'IoT Matrix',
                 description: 'Intelligent IoT ecosystem connecting millions of devices with edge computing capabilities.',
-                image: '/images/iot-matrix.jpg',
+                image: '/images/events/gall6.png',
                 tech: ['MQTT', 'Edge AI', '5G']
             }
         ];

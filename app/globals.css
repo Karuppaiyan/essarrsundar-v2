@@ -860,25 +860,28 @@ main > div > a:hover {
 }
 
 .swiper-slide--one {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
-  url("../public/images/quantum-cloud.jpg") no-repeat 50% 50%/cover;
+  background: linear-gradient(to bottom, #0f2027, #203a4300, #2c536400), 
+  url("/images/ar-interface.jpg") no-repeat 50% 50%/cover;
 }
 
 .swiper-slide--two {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
-  url("../public/images/ar-interface.jpg") no-repeat 50% 50%/cover;
+  background: linear-gradient(to bottom, #030c0f, #203a4300, #2c536400), 
+  url("/images/cyber-defense.jpg") no-repeat 50% 50%/cover;
 }
 
 .swiper-slide--three {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("../public/images/cyber-defense.jpg") no-repeat 50% 50%/cover;
+  background: linear-gradient(to bottom, #0f2027, #203a4300, #2c536400), 
+  url("/images/iot-matrix.jpg") no-repeat 50% 50%/cover;
 }
 
 .swiper-slide--four {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("../public/images/data-nexus.jpg") no-repeat 50% 50%/cover;
+  background: linear-gradient(to bottom, #0f2027, #203a4300, #2c536400), 
+  url("/images/quantum-cloud.jpg") no-repeat 50% 50%/cover;
 }
 
 .swiper-slide--five {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("../public/images/neural-network.jpg") no-repeat 50% 50%/cover;
+  background: linear-gradient(to bottom, #0f2027, #203a4300, #2c536400), 
+  url("/images/neural-network.jpg") no-repeat 50% 50%/cover;
 }
 
 .swiper-3d .swiper-slide-shadow-left,

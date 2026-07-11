@@ -6,12 +6,13 @@ import {
   SkillsSection,
   ContactSection,
   Footer,
-  HeroCarousel,
 } from '@/components';
 
 import type { NextPage } from 'next';
-import AquaticCarousel from "@/components/AquaticCarousel";
+import { useEffect, useState } from "react";
 import Testimonials from "@/components/Testimonial";
+import RentalInventory from "@/components/RentalInventory";
+import HeroImage from "@/components/HeroImage";
 import { generateClient } from "aws-amplify/data";
 import type { Schema } from "@/amplify/data/resource";
 import { useAuthenticator } from "@aws-amplify/ui-react";
@@ -45,7 +46,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Header/>
-      <HeroCarousel/>
+      <HeroImage/>
       <PhilosophySection/>
         <StatsSection/>
         <SkillsSection/>

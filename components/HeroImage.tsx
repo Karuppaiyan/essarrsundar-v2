@@ -8,8 +8,9 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/keyboard";
 import "swiper/css/mousewheel";
+import "../app/page.module.css"; // Import the global CSS file
 
-export default function AquaticCarousel() {
+export default function HeroImage() {
   return (
     <section className="hero" id="home">
        <br />
@@ -51,32 +52,37 @@ export default function AquaticCarousel() {
         className="swiper"
       >
         <SwiperSlide className="swiper-slide swiper-slide--one">
+           
                   <div>
                     <h2>Exhibition Organizers</h2>
+                    <p className="card-description">Next-generation cloud infrastructure leveraging quantum computing for unprecedented processing power.</p>
                     <a href="#" target="_blank">Explore</a>
                   </div>
                 </SwiperSlide>
         
                 <SwiperSlide className="swiper-slide swiper-slide--two">
+               
                   <div>
                     <h2>Exhibitors</h2>
-                    
+                    <p className="card-description">Innovative solutions for showcasing products and services in a dynamic environment.</p>
                     <a href="#" target="_blank">Explore</a>
                   </div>
                 </SwiperSlide>
         
-                <SwiperSlide className="swiper-slide swiper-slide--three">
+                <SwiperSlide className="swiper-slide swiper-slide--three" style={{}}>
+               
                   <div>
                     <h2>Event Companies</h2>
-                   
+                    <p className="card-description">Customized event solutions tailored to meet the unique needs of each client.</p>
                     <a href="#" target="_blank">Explore</a>
                   </div>
                 </SwiperSlide>
         
                 <SwiperSlide className="swiper-slide swiper-slide--four">
+               
                   <div>
                     <h2>Design Agencies</h2>
-                   
+                    <p className="card-description">Creative design services for immersive event experiences.</p>
                     <a href="#" target="_blank">Explore</a>
                   </div>
                 </SwiperSlide>
@@ -84,7 +90,7 @@ export default function AquaticCarousel() {
                 <SwiperSlide className="swiper-slide swiper-slide--five">
                   <div>
                     <h2>Digital Marketing Companies</h2>
-                    
+                    <p className="card-description">Strategic digital marketing solutions to promote your events and reach your target audience.</p>
                     <a href="#" target="_blank">Explore</a>
                   </div>
                 </SwiperSlide>

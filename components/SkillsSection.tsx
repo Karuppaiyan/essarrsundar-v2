@@ -3,18 +3,18 @@
 import React, { useState } from "react";
 
 const skillsData = [
-  { name: "Circular LED", icon: "⚛️", level: 95, category: "frontend" },
-  { name: "LED Tree", icon: "🟢", level: 90, category: "backend" },
-  { name: "Cube LED", icon: "📘", level: 88, category: "frontend" },
-  { name: "Anamorphic LED", icon: "☁️", level: 92, category: "cloud" },
-  { name: "Interactive screen", icon: "🐳", level: 85, category: "cloud" },
-  { name: "Poster led", icon: "🐍", level: 93, category: "backend" },
-  { name: "LED TV Screens", icon: "☸️", level: 82, category: "cloud" },
-  { name: "LFD Wall", icon: "◈", level: 87, category: "backend" },
-  { name: "Custom LED Display", icon: "🤖", level: 78, category: "emerging" },
-  { name: "Dynamic LED Wall", icon: "🔗", level: 75, category: "emerging" },
-  { name: "Fascia LED", icon: "💚", level: 85, category: "frontend" },
-  { name: "LED Sphere", icon: "🍃", level: 90, category: "backend" },
+  { name: "Circular LED", icon: "⚛️", level: 95, category: "Corporate Events" },
+  { name: "LED Tree", icon: "🟢", level: 90, category: "Outdoor Events" },
+  { name: "Cube LED", icon: "📘", level: 88, category: "Wedding Events" },
+  { name: "Anamorphic LED", icon: "☁️", level: 92, category: "Cultural Event" },
+  { name: "Interactive screen", icon: "🐳", level: 85, category: "Corporate Events" },
+  { name: "Poster led", icon: "🐍", level: 93, category: "Corporate Events" },
+  { name: "LED TV Screens", icon: "☸️", level: 82, category: "Outdoor Events" },
+  { name: "LFD Wall", icon: "◈", level: 87, category: "Cultural Event" },
+  { name: "Custom LED Display", icon: "🤖", level: 78, category: "Wedding Events" },
+  { name: "Dynamic LED Wall", icon: "🔗", level: 75, category: "Corporate Events" },
+  { name: "Fascia LED", icon: "💚", level: 85, category: "Wedding Events" },
+  { name: "LED Sphere", icon: "🍃", level: 90, category: "Cultural Event" },
 ];
 
 export default function SkillsSection() {
@@ -37,13 +37,13 @@ export default function SkillsSection() {
 
         {/* Category Tabs */}
         <div className="skill-categories">
-          {["all", "frontend", "backend", "cloud", "emerging"].map((cat) => (
+          {["all", "Corporate Events", "Outdoor Events", "Wedding Events", "Cultural Event"].map((cat) => (
             <div
               key={cat}
               className={`category-tab ${category === cat ? "active" : ""}`}
               onClick={() => setCategory(cat)}
             >
-              {cat === "all" ? "All Skills" : cat.charAt(0).toUpperCase() + cat.slice(1)}
+              {cat === "all" ? "All Skills" : cat}
             </div>
           ))}
         </div>

@@ -666,7 +666,7 @@ founder-image {
 
 /* NEW: Prism Philosophy Section */
 .philosophy-section {
-	padding: 120px 30px;
+	padding: 80px 30px;
 	background: linear-gradient(180deg,
 			var(--primary-black) 0%,
 			rgba(153, 69, 255, 0.02) 50%,
@@ -861,27 +861,27 @@ main > div > a:hover {
 
 .swiper-slide--one {
   background: linear-gradient(to bottom, #0f2027, #203a4300, #2c536400), 
-  url("/images/ar-interface.jpg") no-repeat 50% 50%/cover;
+  url("/images/events/gall0.jpg") no-repeat 50% 50%/cover;
 }
 
 .swiper-slide--two {
   background: linear-gradient(to bottom, #030c0f, #203a4300, #2c536400), 
-  url("/images/cyber-defense.jpg") no-repeat 50% 50%/cover;
+  url("/images/events/gall1.png") no-repeat 50% 50%/cover;
 }
 
 .swiper-slide--three {
   background: linear-gradient(to bottom, #0f2027, #203a4300, #2c536400), 
-  url("/images/iot-matrix.jpg") no-repeat 50% 50%/cover;
+  url("/images/events/gall2.png") no-repeat 50% 50%/cover;
 }
 
 .swiper-slide--four {
   background: linear-gradient(to bottom, #0f2027, #203a4300, #2c536400), 
-  url("/images/quantum-cloud.jpg") no-repeat 50% 50%/cover;
+  url("/images/events/gall3.png") no-repeat 50% 50%/cover;
 }
 
 .swiper-slide--five {
   background: linear-gradient(to bottom, #0f2027, #203a4300, #2c536400), 
-  url("/images/neural-network.jpg") no-repeat 50% 50%/cover;
+  url("/images/events/gall4.png") no-repeat 50% 50%/cover;
 }
 
 .swiper-3d .swiper-slide-shadow-left,
@@ -1132,8 +1132,8 @@ main > div > a:hover {
 
 .stat-card {
 	background: linear-gradient(135deg,
-			rgba(42, 42, 42, 0.5),
-			rgba(26, 26, 26, 0.8));
+			rgba(4, 177, 168, 0.5),
+			rgba(65, 64, 64, 0.8));
 	border: 1px solid var(--metal-dark);
 	border-radius: 15px;
 	padding: 40px 30px;
@@ -1194,14 +1194,14 @@ main > div > a:hover {
 .stat-number {
 	font-size: 48px;
 	font-weight: 900;
-	color: var(--text-primary);
+	color: var(--primary-black);
 	margin-bottom: 10px;
 	font-family: 'Orbitron', monospace;
 }
 
 .stat-label {
 	font-size: 14px;
-	color: var(--text-secondary);
+	color: var(--primary-black);
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	margin-bottom: 15px;
@@ -1209,7 +1209,7 @@ main > div > a:hover {
 
 .stat-description {
 	font-size: 13px;
-	color: var(--text-dim);
+	color: var(--text-primary);
 	line-height: 1.5;
 	padding: 0 10px;
 }

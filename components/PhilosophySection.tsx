@@ -29,14 +29,11 @@ export default function PhilosophySection() {
         <div className="prism-line"></div>
 
         <h2 className="section-title">
-          Refracting Ideas<br />Into Reality
+          About Us<br />ESS ARR SUNDAR
         </h2>
 
         <p className="philosophy-subheading">
-          At PRISM FLUX, we transform complex challenges into elegant solutions
-          through the convergence of cutting-edge technology and visionary
-          design. Every project is a spectrum of possibilities waiting to be
-          discovered.
+          Learn about ESS ARR Enterprises and founder Sundarajan. Leading LED screen and wall rental provider in India for events, concerts, and corporate functions.
         </p>
           <div className="founder-image-container">
             <Image src="/images/Founder_sundar_0.png" alt="Essarr Sundar image" className="founder-image responsive-img" width={718} height={692} />

@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 
-
 const portfolioData = [
             {
                 id: 1,

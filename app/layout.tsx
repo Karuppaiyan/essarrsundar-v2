@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 // @ts-ignore: global stylesheet import type declarations may be missing
 import "./globals.css";
+import './carousel.css';
 
 export const metadata: Metadata = {
   title: "ESS ARR ENTERPRISES",

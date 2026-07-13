@@ -5,9 +5,7 @@ import RentalInventory from '@/components/RentalInventory';
 const RentalInventoryPage: NextPage = () => {
   return (
     <>
-      <Header />
       <RentalInventory />
-      <Footer />
     </>
   );
 };

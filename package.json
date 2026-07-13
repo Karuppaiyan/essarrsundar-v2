@@ -16,6 +16,7 @@
     "next-intl": "^4.13.2",
     "react": "^18",
     "react-dom": "^18",
+    "sharp": "^0.35.3",
     "swiper": "^12.2.0"
   },
   "devDependencies": {

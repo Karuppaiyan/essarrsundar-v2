@@ -30,10 +30,10 @@ export default function Header() {
         {/* Navigation Menu */}
         <ul className={`nav-menu ${menuOpen ? "active" : ""}`} id="navMenu">
           <li><Link href="#home" className="nav-link active">{t('home')}</Link></li>
-          <li><Link href="/#about" className="nav-link">{t('about')}</Link ></li>
-          <li><Link href="/#stats" className="nav-link">{t('services')}</Link></li>
-          <li><Link href="/rentalInventory" className="nav-link">{t('rentalInventory')}</Link></li>
-          <li><Link href="/#contact" className="nav-link">{t('contact')}</Link></li>
+          <li><Link href="#about" className="nav-link">{t('about')}</Link ></li>
+          <li><Link href="#stats" className="nav-link">{t('services')}</Link></li>
+          <li><Link href="#rentalInventory" className="nav-link">{t('rentalInventory')}</Link></li>
+          <li><Link href="#contact" className="nav-link">{t('contact')}</Link></li>
         </ul>
         <LanguageSwitcher />
         {/* Mobile Menu Toggle */}

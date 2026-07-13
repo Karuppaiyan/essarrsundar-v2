@@ -2,8 +2,12 @@
 "use client";
 import React, { useEffect } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+
 
 export default function PhilosophySection() {
+  const t = useTranslations("about");
+
   useEffect(() => {
     const particlesContainer = document.getElementById("particles");
     if (!particlesContainer) return;

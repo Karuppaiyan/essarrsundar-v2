@@ -9,10 +9,12 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/keyboard";
 import "swiper/css/mousewheel";
-import "../app/page.module.css"; // Import the global CSS file
+import "../app/[locale]/page.module.css"; // Import the global CSS file
 
+ 
 export default function HeroImage() {
   const t = useTranslations("hero");
+
 
   return (
     <section className="hero" id="home">
@@ -21,11 +23,11 @@ export default function HeroImage() {
       <main>
         <div className="section-header">
           <span>discover</span>
-                <h1 className="section-title">{t("title")}</h1>
+                <h1 className="section-title">{t('title')}</h1>
                 <p className="section-subtitle">
-                  {t("subtitle")}
+                  {t('subtitle')}
                 </p>
-                <a href="#">{t("learnMore")}</a>
+                <a href="#">{t('learnMore')}</a>
               </div>
         
       <br />

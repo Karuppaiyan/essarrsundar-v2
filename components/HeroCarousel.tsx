@@ -2,7 +2,7 @@
 "use client";
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
-
+import { useTranslations } from "next-intl";
 const portfolioData = [
             {
                 id: 1,
@@ -137,6 +137,7 @@ export default function HeroCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowSize, setWindowSize] = useState({ width: 1200 });
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const t = useTranslations("hero");
 
   const total = portfolioData.length;
   const isMobile = windowSize.width <= 768;

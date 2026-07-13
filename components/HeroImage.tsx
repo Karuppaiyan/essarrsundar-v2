@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useTranslations } from "next-intl";
 import { EffectCoverflow, Pagination, Keyboard, Mousewheel } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -11,6 +12,8 @@ import "swiper/css/mousewheel";
 import "../app/page.module.css"; // Import the global CSS file
 
 export default function HeroImage() {
+  const t = useTranslations("hero");
+
   return (
     <section className="hero" id="home">
        <br />
@@ -18,11 +21,11 @@ export default function HeroImage() {
       <main>
         <div className="section-header">
           <span>discover</span>
-                <h1 className="section-title">We Build Next Gen Event Experiences</h1>
+                <h1 className="section-title">{t("title")}</h1>
                 <p className="section-subtitle">
-                  We are a dedicated agile team of highly skilled technicians, supervisors, managers and workers alike who are trained to handle the most demanding events. We bring expertise of international standards and ethics into our style of working.
+                  {t("subtitle")}
                 </p>
-                <a href="#">Learn More</a>
+                <a href="#">{t("learnMore")}</a>
               </div>
         
       <br />

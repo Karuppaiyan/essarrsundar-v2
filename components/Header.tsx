@@ -5,6 +5,7 @@ import Image from 'next/image';
 // import Link from 'next/link';
 import { Link } from "@/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
+
 import { useTranslations } from "next-intl";
 
 export default function Header() {

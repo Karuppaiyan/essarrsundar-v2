@@ -577,7 +577,7 @@ export default function RentalInventory() {
   }, [selectedCat]);
 
   return (
-    <section style={{ padding: '180px 0 80px', minHeight: '100vh' }}>
+    <section id="rentalInventory" style={{ padding: '180px 0 80px', minHeight: '100vh' }}>
       {/* ── Section heading ── */}
       <div style={{ textAlign: 'center', marginBottom: 60, padding: '0 30px' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 20, marginBottom: 20 }}>

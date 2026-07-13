@@ -38,6 +38,7 @@ const Home: NextPage<Props> = async () => {
       <HeroCarousel />
       <HeroImage />
       <PhilosophySection />
+      <RentalInventory />
       <StatsSection />
       <SkillsSection />      
       <ContactSection />

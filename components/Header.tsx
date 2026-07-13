@@ -2,11 +2,16 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
+import { Link } from "@/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const t = useTranslations();
+
 
   // Scroll effect for header
   useEffect(() => {
@@ -24,13 +29,13 @@ export default function Header() {
          <Link href="#home" className="logo"> <Image src="/images/logo.png" alt="ESS ARR ENTERPRISES" width={150} height={90} /></Link>
         {/* Navigation Menu */}
         <ul className={`nav-menu ${menuOpen ? "active" : ""}`} id="navMenu">
-          <li><Link href="#home" className="nav-link active">Home</Link></li>
-          <li><Link href="../#about" className="nav-link">About</Link ></li>
-          <li><Link href="../#stats" className="nav-link">What We Do</Link></li>
-          <li><Link href="/rentalInventory" className="nav-link">Rental Inventory</Link></li>
-          <li><Link href="../#contact" className="nav-link">Contact</Link></li>
+          <li><Link href="#home" className="nav-link active">{t('Home')}</Link></li>
+          <li><Link href="/#about" className="nav-link">{t('About')}</Link ></li>
+          <li><Link href="/#stats" className="nav-link">{t('WhatWeDo')}</Link></li>
+          <li><Link href="/rentalInventory" className="nav-link">{t('RentalInventory')}</Link></li>
+          <li><Link href="/#contact" className="nav-link">{t('.Contact')}</Link></li>
         </ul>
-
+        <LanguageSwitcher />
         {/* Mobile Menu Toggle */}
         <div
           className={`menu-toggle ${menuOpen ? "active" : ""}`}

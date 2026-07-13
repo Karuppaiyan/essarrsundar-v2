@@ -1,0 +1,51 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "rentalInventory": "Rental Inventory",
+    "contact": "Contact",
+    "gallery": "Gallery"
+  },
+  "hero": {
+    "title": "We Build Next Gen Event Experiences",
+    "subtitle": "Leading LED Screen and Wall Rental Provider in India",
+    "cta": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "about": {
+    "title": "About ESS ARR Enterprises",
+    "heading": "Who We Are",
+    "description": "ESS ARR Enterprises is a pioneering leader in providing interactive LED digital solutions for the entertainment and media industry.",
+    "expertise": "Our Expertise",
+    "founder": "Meet Our Founder",
+    "founderName": "Sundarajan"
+  },
+  "services": {
+    "title": "Our Services",
+    "concerts": "Concert & Music Events",
+    "corporate": "Corporate Events",
+    "outdoor": "Outdoor Events",
+    "production": "Production & Broadcasting",
+    "ledScreens": "LED Screen Rentals",
+    "avEquipment": "AV Equipment Hire"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "message": "Message",
+    "send": "Send Message",
+    "callUs": "Call Us"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "language": "Language",
+    "selectLanguage": "Select Language",
+    "english": "English",
+    "tamil": "Tamil"
+  }
+}

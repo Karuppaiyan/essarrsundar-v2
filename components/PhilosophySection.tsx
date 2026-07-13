@@ -32,6 +32,8 @@ export default function PhilosophySection() {
       <div className="philosophy-container">
         <div className="prism-line"></div>
 
+        t('Hello there!');
+
         <h2 className="section-title">
           About Us<br />ESS ARR SUNDAR
         </h2>

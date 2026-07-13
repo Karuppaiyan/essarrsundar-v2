@@ -1,10 +1,12 @@
 import { getRequestConfig } from 'next-intl/server';
 import { i18n } from './i18n.config';
 
+type Locale = (typeof i18n.locales)[number];
+
 export default getRequestConfig(async ({ locale }) => {
   // 1. Determine target locale: Fall back to default if the route param is invalid
-  const activeLocale = i18n.locales.includes(locale as any) 
-    ? locale 
+  const activeLocale = i18n.locales.includes(locale as Locale)
+    ? (locale as Locale)
     : i18n.defaultLocale;
 
   return {

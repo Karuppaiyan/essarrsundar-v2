@@ -5,8 +5,13 @@ import { NextIntlClientProvider } from 'next-intl';
 import { i18n, type Locale } from '@/i18n.config';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+// TypeScript may complain about side-effect CSS imports in some setups.
+// Suppress the error here since Next.js supports global CSS imports in the app directory.
+// @ts-ignore
 import "./globals.css";
+// @ts-ignore
 import './carousel.css';
+// @ts-ignore
 import './language-switcher.css';
 
 

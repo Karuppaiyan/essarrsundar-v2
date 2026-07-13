@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@aws-amplify/ui-react": "^6.5.5",
+    "@swc/helpers": "^0.5.23",
     "aws-amplify": "^6.6.6",
     "next": "14.2.10",
     "next-intl": "^4.13.2",

@@ -59,6 +59,7 @@ export default async function RootLayout({
       <body>
         <NextIntlClientProvider messages={messages}>
           <Header />
+          
           {children}
           <Footer />
         </NextIntlClientProvider>

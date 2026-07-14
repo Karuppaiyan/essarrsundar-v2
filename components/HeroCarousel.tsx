@@ -6,53 +6,39 @@ import { useTranslations } from "next-intl";
 const portfolioData = [
             {
                 id: 1,
-                title: 'Neural Network',
-                description: 'Advanced AI system with deep learning capabilities for predictive analytics and pattern recognition.',
-                image: '/images/events/gall0.jpg',
-                tech: ['TensorFlow', 'Python', 'CUDA']
+                title: 'Exhibition Organizers',
+                description: 'Next-generation cloud infrastructure leveraging quantum computing for unprecedented processing power.',
+                image: '/images/events/image_0.jpeg',
+                tech: ['Exhibitors', 'Event Companies', 'Design Agencies']
             },
             {
                 id: 2,
-                title: 'Quantum Cloud',
-                description: 'Next-generation cloud infrastructure leveraging quantum computing for unprecedented processing power.',
-                image: '/images/events/gall1.png',
-                tech: ['AWS', 'Kubernetes', 'Docker']
+                title: 'Exhibitors',
+                description: 'Innovative solutions for showcasing products and services in a dynamic environment.',
+                image: '/images/events/image_1.jpeg',
+                tech: ['Digital Marketing Companies']
             },
             {
                 id: 3,
-                title: 'Blockchain Vault',
-                description: 'Secure decentralized storage solution using advanced encryption and distributed ledger technology.',
-                image: '/images/events/gall2.png',
-                tech: ['Ethereum', 'Solidity', 'Web3']
+                title: 'Event Companies',
+                description: 'Customized event solutions tailored to meet the unique needs of each client.',
+                image: '/images/events/image_2.jpeg',
+                tech: ['Exhibitors', 'Design Agencies']
             },
             {
                 id: 4,
-                title: 'Cyber Defense',
-                description: 'Military-grade cybersecurity framework with real-time threat detection and automated response.',
-                image: '/images/events/gall3.png',
-                tech: ['Zero Trust', 'AI Defense']
+                title: 'Design Agencies',
+                description: 'Creative design services for immersive event experiences.',
+                image: '/images/events/image_3.jpeg',
+                tech: ['Design Agencies', 'Exhibitors']
             },
             {
                 id: 5,
-                title: 'Data Nexus',
-                description: 'Big data processing platform capable of analyzing petabytes of information in real-time.',
-                image: '/images/events/gall4.png',
-                tech: ['Apache Spark', 'Hadoop', 'Kafka']
-            },
-            {
-                id: 6,
-                title: 'AR Interface',
-                description: 'Augmented reality system for immersive data visualization and interactive experiences.',
-                image: '/images/events/gall5.png',
-                tech: ['Unity', 'ARCore']
-            },
-            {
-                id: 7,
-                title: 'IoT Matrix',
-                description: 'Intelligent IoT ecosystem connecting millions of devices with edge computing capabilities.',
-                image: '/images/events/gall6.png',
-                tech: ['MQTT', 'Edge AI', '5G']
-            }
+                title: 'Digital Marketing Companies',
+                description: 'Strategic digital marketing solutions to promote your events and reach your target audience.',
+                image: '/images/events/image_4.jpeg',
+                tech: ['Digital Marketing Companies']
+            }           
         ];
 
 function getItemStyle(
@@ -231,7 +217,7 @@ export default function HeroCarousel() {
                   <div className="card-number">{item.id}</div>
                   <div className="card-image">
                     {/* <img src={item.image} alt={item.title} /> */}
-                    <Image src={item.image} alt={item.title} width={600} height={400} className="responsive-img" />
+                    <Image src={item.image} alt={item.title} width={600} height={600} className="responsive-img" />
 
                   </div>
                   <h3 className="card-title">{item.title}</h3>

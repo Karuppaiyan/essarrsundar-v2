@@ -865,27 +865,27 @@ main > div > a:hover {
 
 .swiper-slide--one {
   background: linear-gradient(to bottom, #0f2027, #203a4300, #2c536400), 
-  url("/images/events/gall0.jpg") no-repeat 50% 50%/cover;
+  url("/images/events/image_0.jpeg") no-repeat 50% 50%/cover;
 }
 
 .swiper-slide--two {
   background: linear-gradient(to bottom, #030c0f, #203a4300, #2c536400), 
-  url("/images/events/gall1.png") no-repeat 50% 50%/cover;
+  url("/images/events/image_1.jpeg") no-repeat 50% 50%/cover;
 }
 
 .swiper-slide--three {
   background: linear-gradient(to bottom, #0f2027, #203a4300, #2c536400), 
-  url("/images/events/gall2.png") no-repeat 50% 50%/cover;
+  url("/images/events/image_2.jpeg") no-repeat 50% 50%/cover;
 }
 
 .swiper-slide--four {
   background: linear-gradient(to bottom, #0f2027, #203a4300, #2c536400), 
-  url("/images/events/gall3.png") no-repeat 50% 50%/cover;
+  url("/images/events/image_3.jpeg") no-repeat 50% 50%/cover;
 }
 
 .swiper-slide--five {
   background: linear-gradient(to bottom, #0f2027, #203a4300, #2c536400), 
-  url("/images/events/gall4.png") no-repeat 50% 50%/cover;
+  url("/images/events/image_4.jpeg") no-repeat 50% 50%/cover;
 }
 
 .swiper-3d .swiper-slide-shadow-left,
@@ -904,6 +904,131 @@ main > div > a:hover {
   .swiper {
     width: 145%;
   }
+}
+
+/* About Us Section */
+.about-section {
+	padding: 180px 30px;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.about-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 60px;
+	align-items: start;
+}
+
+.about-content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.about-title {
+	font-size: 36px;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background: linear-gradient(135deg, var(--text-primary), var(--accent-purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	margin-bottom: 10px;
+}
+
+.about-text {
+	color: var(--text-secondary);
+	font-size: 16px;
+	line-height: 1.8;
+}
+
+.about-galleries {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.gallery-title {
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: var(--text-primary);
+	margin-bottom: 16px;
+}
+
+.photo-gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 14px;
+}
+
+.photo-gallery-grid img {
+	width: 100%;
+	height: 500px;
+	object-fit:cover;
+	border-radius: 12px;
+	border: 1px solid var(--metal-dark);
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.photo-gallery-grid img:hover {
+	transform: translateY(-5px) scale(1.02);
+	box-shadow: 0 10px 25px rgba(153, 69, 255, 0.3);
+	border-color: var(--accent-purple);
+}
+
+.video-gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 14px;
+}
+
+.video-gallery-grid video,
+.video-gallery-grid iframe {
+	width: 100%;
+	height: 150px;
+	border-radius: 12px;
+	border: 1px solid var(--metal-dark);
+	transition: all 0.3s ease;
+}
+
+.video-gallery-grid video:hover,
+.video-gallery-grid iframe:hover {
+	border-color: var(--accent-purple);
+	box-shadow: 0 10px 25px rgba(153, 69, 255, 0.3);
+}
+
+@media (max-width: 1024px) {
+	.about-container {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+}
+
+@media (max-width: 768px) {
+	.about-section {
+		padding: 60px 20px;
+	}
+
+	.about-title {
+		font-size: 28px;
+	}
+
+	.photo-gallery-grid,
+	.video-gallery-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+	}
+
+	.photo-gallery-grid img,
+	.video-gallery-grid video,
+	.video-gallery-grid iframe {
+		height: 350px;
+	}
 }
 
 /* Philosophy Section */

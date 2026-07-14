@@ -17,7 +17,7 @@ export default function HeroImage() {
 
 
   return (
-    <section className="hero" id="home">
+    <section className="hero" id="services">
        <br />
       <br />
       <main>

@@ -18,6 +18,8 @@ import {
 import Testimonials from "@/components/Testimonial";
 import RentalInventory from "@/components/RentalInventory";
 import HeroImage from "@/components/HeroImage";
+import BackToTop from "@/components/BackToTop";
+import AboutUs from "@/components/AboutUs";
 
 // Configure Amplify on the server side
 Amplify.configure(outputs);
@@ -34,14 +36,15 @@ const Home: NextPage<Props> = async () => {
   // Fetch messages safely on the server side
   const messages = await getMessages();
   return (
+
+    
     <NextIntlClientProvider messages={messages}>
+      <BackToTop threshold={300} />
       <HeroCarousel />
-      <HeroImage />
-      <PhilosophySection />
+      <AboutUs />
+      <HeroImage/>
       <RentalInventory />
-      <StatsSection />
-      <SkillsSection />      
-      <ContactSection />
+      <ContactSection />      
     </NextIntlClientProvider>
   );
 };

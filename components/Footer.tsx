@@ -4,6 +4,7 @@ import React from "react";
 import Image from 'next/image';
 import logo from '../public/images/logo.png';
 
+
 const services = ["Services", "Products", "Solutions", "Careers"];
 const company = ["About Us", "Our Team", "Careers", "Press Kit"];
 const resources = ["Documentation", "API Reference", "Blog", "Support"];
@@ -18,6 +19,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
+        
         {/* Brand Section */}
         <div className="footer-brand">
           <div className="footer-logo">

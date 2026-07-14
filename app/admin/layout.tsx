@@ -9,9 +9,16 @@ Amplify.configure(outputs, { ssr: true });
 
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <AdminLayout>
+ return (
+<html lang="en">
+      <body>
+       <AdminLayout>
+      {children}
+    </AdminLayout>
+      </body>
+    </html>
+
     
-    {children}
-    
-    </AdminLayout>;
+  );
+  
 }

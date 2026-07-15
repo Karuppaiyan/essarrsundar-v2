@@ -1,8 +1,15 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-import { client, type SiteSetting } from '../lib/amplify-client';
+import { client } from '../lib/amplify-client';
 import Modal from '@/components/admin/Modal';
+
+type SiteSetting = {
+  id: string;
+  key: string;
+  value: string;
+  label?: string | null;
+};
 
 const DEFAULT_SETTINGS = [
   { key: 'company_name',    label: 'Company Name',      value: 'ESS ARR ENTERPRISES' },

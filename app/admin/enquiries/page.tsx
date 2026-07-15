@@ -1,7 +1,10 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-import { client, type Enquiry, type EnquiryStatus } from '../lib/amplify-client';
+import { client, type Enquiry } from '../lib/amplify-client';
+
+// Local status type (amplify-client does not export EnquiryStatus in some builds)
+type EnquiryStatus = 'new' | 'contacted' | 'closed';
 import Modal from '@/components/admin/Modal';
 
 const STATUS_CONFIG: Record<EnquiryStatus, { label: string; color: string; bg: string }> = {

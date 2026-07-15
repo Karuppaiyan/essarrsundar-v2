@@ -2,6 +2,8 @@
 
 import { useState, useMemo } from 'react';
 
+
+
 /* ─── Types ─────────────────────────────────────────── */
 interface Product {
   id: string;

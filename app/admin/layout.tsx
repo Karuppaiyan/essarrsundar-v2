@@ -1,24 +1,17 @@
+// app/admin/layout.tsx
+import './lib/amplify-config';   
+// side-effect import, runs Amplify.configure()
 import AdminLayout from '@/components/admin/AdminLayout';
-import { Amplify } from "aws-amplify";
+import "../[locale]/globals.css";
 
 export const metadata = { title: 'Admin — ESS ARR ENTERPRISES' };
 
-import outputs from "../../amplify_outputs.json";
-
-Amplify.configure(outputs, { ssr: true });
-
-
 export default function Layout({ children }: { children: React.ReactNode }) {
- return (
-<html lang="en">
+  return (
+    <html lang="en">
       <body>
-       <AdminLayout>
-      {children}
-    </AdminLayout>
+        <AdminLayout>{children}</AdminLayout>
       </body>
     </html>
-
-    
   );
-  
 }

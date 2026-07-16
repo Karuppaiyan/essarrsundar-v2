@@ -1,33 +1,17 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Amplify } from 'aws-amplify';
-import { signIn, signOut, confirmSignIn, resetPassword, confirmResetPassword } from 'aws-amplify/auth';
-import amplifyOutputs from "../../../amplify_outputs.json"; // Adjust the path as needed to point to your amplify outputs file
-
-
-
-Amplify.configure({
-  Auth: {
-        Cognito: {
-          userPoolId: amplifyOutputs.auth.user_pool_id,
-          userPoolClientId: amplifyOutputs.auth.user_pool_client_id,
-          signUpVerificationMethod: 'code',
-          loginWith: {
-            username: true,
-            email: true,
-          }
-        }
-      }
-});
+import { signIn, confirmSignIn, resetPassword, confirmResetPassword, getCurrentUser } from 'aws-amplify/auth';
+import '../lib/amplify-config'; // side-effect import — configures Amplify once, shared everywhere
 
 type Step = 'login' | 'new-password' | 'forgot' | 'forgot-confirm';
 
-const handleSignOut = async () => {
-  await signOut();
-};
+const DEV_AUTO_LOGIN = process.env.NODE_ENV === 'development';
+const DEV_EMAIL = process.env.NEXT_PUBLIC_DEV_ADMIN_EMAIL;
+const DEV_PASSWORD = process.env.NEXT_PUBLIC_DEV_ADMIN_PASSWORD;
 
+console.log('DEBUG:', DEV_EMAIL, DEV_PASSWORD ? '[password set]' : '[MISSING]');
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -39,7 +23,40 @@ export default function AdminLoginPage() {
   const [error, setError]     = useState('');
   const [loading, setLoading] = useState(false);
   const [showPwd, setShowPwd] = useState(false);
-  
+  const [checkingSession, setCheckingSession] = useState(DEV_AUTO_LOGIN);
+
+  /* ── Dev-only auto sign-in on mount ── */
+  useEffect(() => {
+    if (!DEV_AUTO_LOGIN) return;
+
+    async function autoLogin() {
+      try {
+        await getCurrentUser();
+        router.replace('/admin/dashboard');
+        return;
+      } catch {
+        // no existing session — fall through to sign in
+      }
+
+      if (!DEV_EMAIL || !DEV_PASSWORD) {
+        setCheckingSession(false);
+        return;
+      }
+
+      try {
+        const result = await signIn({ username: DEV_EMAIL, password: DEV_PASSWORD });
+        if (result.isSignedIn) {
+          router.replace('/admin/dashboard');
+          return;
+        }
+      } catch (err: unknown) {
+        setError(err instanceof Error ? `Auto-login failed: ${err.message}` : 'Auto-login failed.');
+      }
+      setCheckingSession(false);
+    }
+
+    autoLogin();
+  }, [router]);
 
   /* ── Handlers ── */
   const handleLogin = async (e: React.FormEvent) => {
@@ -132,6 +149,14 @@ export default function AdminLoginPage() {
     'forgot-confirm': 'Enter Reset Code',
   };
 
+  if (checkingSession) {
+    return (
+      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <p style={{ color: 'var(--text-dim)', fontSize: 13, letterSpacing: 1 }}>Checking session…</p>
+      </div>
+    );
+  }
+
   return (
     <div style={{
       minHeight: '100vh', display: 'flex',
@@ -139,7 +164,7 @@ export default function AdminLoginPage() {
       padding: 20,
     }}>
       <div style={{ width: '100%', maxWidth: 420 }}>
-
+    
         {/* Logo */}
         <div style={{ textAlign: 'center', marginBottom: 40 }}>
           <div style={{

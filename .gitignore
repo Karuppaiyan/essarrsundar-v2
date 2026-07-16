@@ -45,3 +45,7 @@ aws-exports.js
 # package manager
 package-lock.json
 package.json
+
+
+#env
+.env.local
